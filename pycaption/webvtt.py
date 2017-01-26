@@ -296,8 +296,8 @@ class WebVTTWriter(BaseWriter):
                 layout = caption.layout_info or self.global_layout
             cue_settings = self._cue_settings_from(layout)
             output += timespan + cue_settings + '\n'
-            output += cue_style_tags[0] + cue_text + cue_style_tags[1] + '\n'
 
+            output += unicode(cue_style_tags[0] + cue_text + cue_style_tags[1] + '\n', errors='ignore')
         return output
 
     def _cue_settings_from(self, layout):
