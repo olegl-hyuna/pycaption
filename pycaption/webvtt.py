@@ -4,6 +4,8 @@ import sys
 import datetime
 from copy import deepcopy
 
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 from .base import (
     BaseReader, BaseWriter, CaptionSet, CaptionList, Caption, CaptionNode
